@@ -1,13 +1,15 @@
 ---
 layout: nil
 ---
-
+.noto {
+    font-family: 'Noto Sans Korean', sans-serif;
+}
 
 /*
  * Fonts
  */
 
-@font-face {
+/* @font-face {
   font-family: 'fontello';
   src: url('font/fontello.eot');
   src: url('font/fontello.eot#iefix') format('embedded-opentype'),
@@ -16,7 +18,9 @@ layout: nil
        url('font/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
+
+
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
