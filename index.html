@@ -83,7 +83,8 @@
         <div class="col">
             <h2>기본 규칙</h2>
             <ul>
-                <li>가능한 규칙을 지켜 코드를 작성합니다. 만약 수정해야 할 내용이 있다면 팀내에서 논의하여 문서가 업데이트 될 수 있도록 합니다.</li>
+                <li>가능한 규칙을 지켜 코드를 작성합니다.</li>
+                <li>만약 수정해야 할 내용이 있다면 팀내에서 논의하여 문서가 업데이트 될 수 있도록 합니다.</li>
                 <li>얼마나 많은 작업자가 참여했는지와 무관하게 한명이 쓴 것처럼 보이는 것이 좋습니다.</li>
             </ul>
         </div>
@@ -94,11 +95,14 @@
     <div class="section" id="html-syntax">
         <div class="col">
             <h3>HTML 문법</h3>
-            <ul></ul>
-            <li>공백 문자 네 개를 사용하는 하드탭을 사용합니다.</li>
-            <li>속성(attr)값을 지정할 때에는 작은 따옴표 대신 항상 큰 따옴표를 사용합니다.</li>
-            <li>단일 태그에서는 슬래시(/)를 사용하지 않습니다. (e.g. <code>&lt;br/&gt;</code> or <code>&lt;img/&gt;</code>)</li>
-            <li>텍스트의 단락은 <code>&lt;p&gt;</code>태그를 사용합니다. 여러 개의 <code>&lt;br&gt;</code>태그를 사용하지 않습니다.</li>
+            <ul>
+                <li>공백 문자가 아닌 들여쓰기 크기가 4인 하드탭을 사용합니다.</li>
+                <li>속성(attr)값을 지정할 때에는 작은 따옴표 대신 항상 큰 따옴표를 사용합니다.</li>
+                <li>단일 태그에서는 슬래시(/)를 사용하지 않습니다. (e.g. <code>&lt;br/&gt;</code> or <code>&lt;img/&gt;</code>)</li>
+                <li>텍스트의 단락은 <code>&lt;p&gt;</code>태그를 사용합니다. 여러 개의 <code>&lt;br&gt;</code>태그를 사용하지 않습니다.</li>
+                <li>텍스트가 첨부된 양식은 <code>&lt;label&gt;</code>을 항상 사용하여야 합니다.</li>
+                <li>닫기 주석 <code>(&gt;!-- // --&gt;)</code>은 넣지 않습니다.</li>
+                <li>동작과 연관이 있다면 <code>&lt;button&gt;</code> 태그를, 페이지 이동과 연관이 있다면 <code>&lt;a&gt;</code>태그를 사용합니다.</li>
             </ul>
         </div>
         <div class="col">
@@ -126,20 +130,19 @@
             <div class="highlight">
                 <pre>
 		<code class="language-html" data-lang="html">
-			<span class="cp">&lt;!DOCTYPE html&gt;</span>
-			<span class="nt">&lt;html&gt;</span>
-			<span class="nt">&lt;head&gt;</span>
-			<span class="nt">&lt;/head&gt;</span>
-			<span class="nt">&lt;/html&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span><span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 		</code>
-	  </pre>
+	    </pre>
             </div>
         </div>
     </div>
     <div class="section" id="html-lang">
         <div class="col">
             <h3>언어(lang) 속성</h3>
-            <p>문서의 루트 요소인 html에 lang 속성을 추가합니다.</p>
+            <p>문서의 루트 요소인 html에 lang 속성을 추가합니다. lang 속성은 검색과 음성장치에 활용됩니다.</p>
             <ul>
             </ul>
             <li>한국어: ko</li>
@@ -158,17 +161,9 @@
             <div class="highlight">
                 <pre>
 		<code class="language-html" data-lang="html">
-			<span class="nt">&lt;html</span> 
-			<span class="na">lang=</span>
-			<span class="s">&quot;ko&quot;</span>
-			<span class="nt">&gt;</span>
-			<span class="c">&lt;!-- ... --&gt;</span>
-			<span class="nt">&lt;body</span> 
-			<span class="na">class=</span>
-			<span class="s">&quot;ko-KR&quot;</span>
-			<span class="nt">&gt;</span>
-			<span class="c">&lt;!-- ... --&gt;</span>
-			<span class="nt">&lt;/html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;ko&quot;</span> <span class="nt">&gt;</span>
+<span>...</span>			
+<span class="nt">&lt;/html&gt;</span>
 		</code>
 	  </pre>
             </div>
@@ -203,6 +198,17 @@
             <div class="highlight">
                 <pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=Edge&quot;</span><span class="nt">&gt;</span></code></pre>
             </div>
+        </div>
+    </div>
+    <div class="section" id="html-metaport">
+        <h3>viewport 설정</h3>
+        <p>디바이스 상에서 최초 페이지를 로딩할 때 확대 정도, 최대 확대비율, 최소 확대비율 등을 다루는 속성입니다.</p>
+        <div class="highlight">
+            <pre>
+                <code class="laguage-html" data-lang="html">
+<span class="nt"></span>
+                </code>
+            </pre>
         </div>
     </div>
     <div class="section" id="html-style-script">
@@ -268,7 +274,7 @@
     <div class="section" id="html-boolean-attributes">
         <div class="col">
             <h3>Boolean 속성</h3>
-            <p>불리언 태그 속성은 굳이 속성값을 지정할 필요가 없으므로 지정하지 않습니다. (XHTML에서는 속성값 지정이 필요했지만 HTML5에서는 그런 제약이 없어졌습니다.)</p>
+            <p>불리언 태그 속성은 굳이 속성값을 지정할 필요가 없으므로 지정하지 않습니다. (XHTML에서는 속성값 지정이 필요했지만 HTML5에서는 그런 제약이 없어졌습니다. <a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes" target="_blank">참고</a>)</p>
         </div>
         <div class="col">
             <div class="highlight">
@@ -285,7 +291,11 @@
     <div class="section" id="html-reducing-markup">
         <div class="col">
             <h3>마크업 간결화</h3>
-            <p>모듈화를 고려하여 가능한 마크업은 간결하게 작성합니다.</p>
+            <ul>
+                <li>모듈화를 고려하여 가능한 마크업은 간결하게 작성합니다.</li>
+                <li>불필요한 부모요소를 피합니다.</li>
+            </ul>
+
         </div>
         <div class="col">
             <div class="highlight">
@@ -308,7 +318,12 @@
     <div class="section" id="html-outline">
         <div class="col">
             <h3>HTML5 아웃라인</h3>
-            <p>문서의 영역별로 적절한 헤딩태그를 추가하여 HTML5 아웃라인이 올바르게 구성되도록 합니다. HTML5 아웃라인에 대한 설명은 <a href="http://nuli.navercorp.com/sharing/seminar/2014/08" target="_blank">다음</a>을 참조합니다.</p>
+            <ul>
+                <li>문서의 영역별로 적절한 헤딩태그를 추가하여 HTML5 아웃라인이 올바르게 구성되도록 합니다. HTML5 아웃라인에 대한 설명은 <a href="http://nuli.navercorp.com/sharing/seminar/2014/08" target="_blank">다음</a>을 참조합니다.</li>
+                <li>
+                    헤딩 요소로만 문서의 구조를 파악할 수 있게 합니다. 크롬 add-on webdeveloper tools &gt; information &gt; View Document outline으로 확인합니다.
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -319,16 +334,12 @@
         <div class="col">
             <h3>CSS 문법</h3>
             <ul>
-                <li>공백 문자 네 개를 사용하는 소프트탭을 사용합니다.</li>
-                <li>쉼표를 사용하여 선택자를 그룹핑하는 경우, 개행하여 한 줄에 하나씩 작성합니다.</li>
+                <li>공백문자가 아닌 들여쓰기 크기가 4인 하드 탭을 사용합니다.</li>
                 <li>가독성을 높이기 위해 여는 중괄호 앞에 여백을 한칸 놓습니다.</li>
-                <li>닫는 중괄호는 새로운 줄에 놓습니다.</li>
                 <li>각 선언에서 <code>:</code> 뒤에는 공백 문자 하나를 포함시킵니다.</li>
-                <li>각 선언은 한 줄에 하나씩 하도록 합니다. 그렇게 함으로써 좀 더 정확하게 에러를 확인 할 수 있습니다.</li>
                 <li>모든 선언은 마지막에 세미콜론(;)으로 끝냅니다. 맨 마지막 선언에서는 생략가능하지만, 이후 발생할 수 있는 실수를 방지하기 위함입니다.</li>
-                <li>콤마로 나뉜 다중 속성값들은 각각의 콤마 뒤에 공백 문자를 하나 포함시키거나 줄 맞춰 개행합니다. (e.g., <code>box-shadow</code>).</li>
+                <li>콤마로 나뉜 다중 속성값들은 각각의 콤마 뒤에 공백 문자를 하나 포함시킵니다. (e.g., <code>box-shadow</code>).</li>
                 <li><code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, <code>rect()</code> 값들 안에서는 콤마로 나뉜다고 하더라도 공백 문자를 포함시키지 않습니다. 이 값들은 다중 속성값이 아니기 때문입니다.</li>
-                <li>속성값이나 색상값들에 소숫점을 사용할 때 <code>0.</code>을 사용하지 않습니다. (e.g., <code>0.5</code>대신 <code>.5</code>를, <code>-0.5px</code>대신 <code>-.5px</code>를 사용)</li>
                 <li>축약이 가능한 16진수값의 경우 가능한 축약하여 사용합니다. (e.g., <code>#ffffff</code> 대신 <code>#fff</code>사용)</li>
                 <li>가급적 속성값들에는 홑따옴표를 사용합니다. (e.g., <code>input[type='text']</code>)</li>
                 <li>값이 0일 때는 가능한 단위를 생략합니다. (e.g., <code>margin: 0px;</code> 대신 <code>margin: 0;</code> 사용)</li>
@@ -336,7 +347,7 @@
         </div>
         <div class="col">
             <div class="highlight">
-                <pre><code class="language-css" data-lang="css"><span class="c">/* Bad CSS */</span>
+                <!-- <pre><code class="language-css" data-lang="css"><span class="c">/* Bad CSS */</span>
 				<span class="nc">.selector</span><span class="o">,</span> <span class="nc">.selector-secondary</span><span class="o">,</span> <span class="nc">.selector</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">text</span><span class="o">]</span> <span class="p">{</span>
 				<span class="k">padding</span><span class="o">:</span><span class="m">15px</span><span class="p">;</span>
 				<span class="k">margin</span><span class="o">:</span><span class="m">0px</span> <span class="m">0px</span> <span class="m">15px</span><span class="p">;</span>
@@ -352,7 +363,7 @@
 				<span class="k">margin-bottom</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
 				<span class="k">background-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">5</span><span class="p">);</span>
 				<span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">2px</span> <span class="m">#ccc</span><span class="o">,</span> <span class="k">inset</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">0</span> <span class="m">#fff</span><span class="p">;</span>
-				<span class="p">}</span></code></pre>
+				<span class="p">}</span></code></pre> -->
             </div>
         </div>
     </div>
@@ -368,9 +379,7 @@
                 <li>테두리</li>
                 <li>기타</li>
             </ol>
-            <p>포지션 관련 선언들을 가장 먼저 작성합니다. 요소의 역할과 특징을 가장 크게 나타내는 속성들이기 때문입니다. 다음으로 요소의 크기와 위치를 지정하는 박스모델 관련 속성을 작성합니다.</p>
-            <p>이 외의 나머지 속성들은 앞의 두 분류에 영향을 주지 않고, 해당 요소의 내부에서의 변화만을 지정하기 때문에 나중으로 배치합니다.</p>
-            <p>나머지 속성중 자주 사용되며 속성의 갯수가 많은 타입,배경,테두리 관련 속성들을 따라서 작성하고, 그 외 기타 속성들을 마지막에 작성합니다.</p>
+            <p>포지셔닝과 박스모델 관련 속성을 가장 먼저 작성하고 나머지는 뒤에 놓습니다.</p>
         </div>
         <div class="col">
             <div class="highlight">
