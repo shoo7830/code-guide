@@ -666,9 +666,33 @@
     <div class="section" id="a11y-index">
         <div class="col">
             <h3>웹접근성 확보</h3>
+            <p>웹 접근성 기준은 한국형 웹 콘텐츠 접근성 지침 2.1(KWCAG 2.1)을 기준으로 작성되었습니다.</p>
             <p>장애를 가진 사용자들도 불편 없이 사용 할 수 있도록 웹접근성 원칙들을 지켜 코드를 작성합니다.</p>
             <ul>
-                <li>디자인상 노출되어 있지 않은 헤딩도 코드상에 작성(class="a11y" 사용)</li>
+                <li>텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 합니다.</li>
+                <li>콘텐츠는 색에 관계없이 인식될 수 있어야 합니다.</li>
+                <li>
+                    텍스트 콘텐츠와 배경 간의 명도 대비는 4.5 대 1이상이어야 합니다.
+                    <ul>
+                        <li>텍스트 콘텐츠를 구성하고 있는 텍스트 폰트를 18pt이상 또는 14pt 이상의 굵은 폰트를 사용하는 경우에는 명도 대비를 3대 1까지 낮출 수 있다.</li>
+                        <li>화면 확대가 가능하도록 구현한 텍스트 콘텐츠(텍스트 및 텍스트 이미지)의 명도 대비는 3 대 1까지 낮출 수 있다. </li>
+                    </ul>
+                </li>
+                <li>모든 기능은 키보드만으로도 사용할 수 있어야 한다. </li>
+                <li>키보드에 의한 초점은 논리적으로 이동해야 하며, 시각적으로 구별할수 있어야 한다. </li>
+                <li>사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다. </li>
+                <li>시간제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다. </li>
+                <li>자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.</li>
+                <li>콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.</li>
+                <li>페이지, 콘텐츠 블록에는 적절한 제목을 제공해야 한다. </li>
+                <li>링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.</li>
+                <li>주로 사용하는 언어를 명시해야 한다. </li>
+                <li>사용자가 의도하지 않은 기능(새 창, 초점에 의한 맥락변화 등)은 실행되지 않아야 한다. </li>
+                <li>콘텐츠는 논리적인 순서로 제공해야 한다.</li>
+                <li>마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.</li>
+            </ul>
+
+            <ul>
                 <li>컨텐츠 이미지에 대체텍스트 지정</li>
                 <li>Tab 버튼 사용시 포커스 노출 및 이동순서가 올바르게 되도록 작성</li>
                 <li>저시력 사용자를 위해 충분한 명도대비 확보</li>
@@ -691,23 +715,8 @@
         </ul>
         <ul class="quick-links">
             <li class="follow-btn"> <a href="https://twitter.com/mdo" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @mdo</a> </li>
-            <li class="tweet-btn"> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lezhin.github.io/markup-guide" data-count="horizontal" data-via="mdo">Tweet</a> </li>
         </ul>
     </footer>
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script type="text/javascript">
-        var _gauges = _gauges || [];
-        (function() {
-            var t = document.createElement('script');
-            t.type = 'text/javascript';
-            t.async = true;
-            t.id = 'gauges-tracker';
-            t.setAttribute('data-site-id', '4f6ac530613f5d32c2000037');
-            t.src = '//secure.gaug.es/track.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(t, s);
-        })();
-    </script>
 </body>
 
 </html>
